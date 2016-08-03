@@ -13,23 +13,23 @@ public class Autorization {
     public Autorization(WebDriver driver) {this.driver = driver;}
 
     public void clickOnYourAccount() {
-        driver.findElement(By.xpath("html/body/div[8]/header/div[2]/nav/div[1]/ul/li[1]/a")).click();
+        driver.findElements(By.cssSelector(".elem_nav.dropdown_opener.active")).get(0).click();
     }
     public void clickOnSignIn() {
         driver.findElement(By.cssSelector(".btn.average.open_popup")).click();
     }
     public void inputUserData (String account, String pass){
-    driver.findElement(By.xpath(".//*[@id='signin_form']/div[1]/div[1]/input")).sendKeys(account);
-    driver.findElement(By.xpath(".//*[@id='signin_form']/div[1]/div[2]/input")).sendKeys(pass);
+    driver.findElements(By.cssSelector(".input_wrapper>input")).get(0).sendKeys(account);
+    driver.findElements(By.cssSelector(".input_wrapper>input")).get(1).sendKeys(pass);
     }
     public void clickOnLogin() {
-    driver.findElement(By.xpath(".//*[@id='signin_form']/div[2]/button")).click();
+    driver.findElement(By.cssSelector(".btn.login_btn")).click();
 
     }
-    public void checkRightEntry(String keyword)
+    public void checkLogin(String keyword)
 
     {
-        assertEquals(driver.findElement(By.xpath("html/body/div[8]/header/div[2]/nav/div[1]/ul/li[1]/div/div[2]/ul/li[1]/ul/li[1]/a")).getText(), (keyword));
+        assertEquals(driver.findElements(By.cssSelector(".link_list>li>a")).get(0).getText(), (keyword));
     }
 
 

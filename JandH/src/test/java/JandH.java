@@ -27,7 +27,7 @@ public class JandH {
         qakelremtest.inputUserData("qakelremtest1@kismail.ru", "111111");
         qakelremtest.clickOnLogin();
         qakelremtest.clickOnYourAccount();
-        qakelremtest.checkRightEntry("Your Account");
+        qakelremtest.checkLogin("Your Account");
 
         order.before();
         //for (int i = 0; i < 1; i++) {
