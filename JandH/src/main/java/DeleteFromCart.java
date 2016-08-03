@@ -24,10 +24,9 @@ public class DeleteFromCart {
 
 /*
 
-    for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < 100; i++) {
             deleteFromeCurt.before();
             deleteFromeCurt.deleteFromCart();
         }
-
 
  */

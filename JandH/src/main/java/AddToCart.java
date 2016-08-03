@@ -16,14 +16,14 @@ public class AddToCart {
 
     @Before
     public void before() {
-        driver.get("http://jandh3-test.php-cd.attractgroup.com/");
+        driver.findElement(By.cssSelector(".logo")).click();
     }
     @Test
     public void choseItem() throws InterruptedException {
 
 
-    driver.findElements(By.cssSelector(".item>a>img")).get(0).click();
-    driver.findElements(By.cssSelector(".btn.add_to_cart")).get(0).click();
+    driver.findElements(By.cssSelector(".item>a>img")).get(7).click();   // Если изменится промоакции на главной не сработает
+    driver.findElements(By.cssSelector(".btn.add_to_cart")).get(2).click(); // Если не было предыдущих закупок 2х не сработает
 
 
 

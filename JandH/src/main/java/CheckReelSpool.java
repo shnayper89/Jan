@@ -32,10 +32,10 @@ public class CheckReelSpool {
             driver.findElement(By.xpath(".//*[@id='linespool_params_block']/form/div/div[3]/div/ul/li[2]")).click();
             Thread.sleep(2000);
             driver.findElement(By.xpath(".//*[@id='line_btn_2']")).click();
-            driver.get("http://jandh3-test.php-cd.attractgroup.com/");
+
 
         }
-        else {driver.get("http://jandh3-test.php-cd.attractgroup.com/");}
+
     }
 
 

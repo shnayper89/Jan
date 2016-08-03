@@ -12,8 +12,9 @@ public class Autorization {
 
     public Autorization(WebDriver driver) {this.driver = driver;}
 
-    public void clickOnYourAccount() {
-        driver.findElements(By.cssSelector(".elem_nav.dropdown_opener.active")).get(0).click();
+    public void clickOnYourAccount() throws InterruptedException {
+
+        driver.findElements(By.cssSelector(".elem_nav.dropdown_opener")).get(0).click();
     }
     public void clickOnSignIn() {
         driver.findElement(By.cssSelector(".btn.average.open_popup")).click();
@@ -29,7 +30,7 @@ public class Autorization {
     public void checkLogin(String keyword)
 
     {
-        assertEquals(driver.findElements(By.cssSelector(".link_list>li>a")).get(0).getText(), (keyword));
+        assertEquals(driver.findElements(By.cssSelector(".link_list>li>a")).get(2).getText(), (keyword));
     }
 
 
