@@ -3,9 +3,9 @@ import org.junit.Test;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
- * Created by spirit on 8/1/16.
+ * Created by spirit on 8/4/16.
  */
-public class JandH {
+public class CheckMiniTests {
     FirefoxDriver driver = new FirefoxDriver();
     Autorization autorization = new Autorization(driver);
     AddToCart addToCart = new AddToCart(driver);
@@ -33,29 +33,8 @@ public class JandH {
         autorization.clickOnYourAccount();
 
         autorization.checkLogin("Your Account");
-
-        for (int i = 0; i < 1; i++) {
-            addToCart.before();
-            addToCart.choseItem();
-            checkReelSpool.checkReelSpool();
-        }
-
-        addToCart.after();
-
-        checkout.proceedToCheckout(".btn", "Proceed to Checkout");
-
-        paymentmethod.clickOnChangePaymentMethod();
-        paymentmethod.selectionPaymentMethod_CreditCard();
-        paymentmethod.clickOnPlaceYourOrder();
+        driver.get("http://jandh3-test.php-cd.attractgroup.com/checkout/success/41281");
 
         check_OrderIsPlaced.check_OrderIsPlaced();
-
+    }
 }
-
-
-}
-    //@After
-
-    //public void close() {driver.close();}
-
-

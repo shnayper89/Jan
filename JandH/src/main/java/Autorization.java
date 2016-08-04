@@ -24,7 +24,10 @@ public class Autorization {
     driver.findElements(By.cssSelector(".input_wrapper>input")).get(1).sendKeys(pass);
     }
     public void clickOnLogin() {
-    driver.findElement(By.cssSelector(".btn.login_btn")).click();
+        driver.findElement(By.cssSelector(".btn.login_btn")).click();
+    }
+    public void clickOnYourOrder() {
+        driver.findElements(By.cssSelector(".link_list>li>a")).get(3).click();
 
     }
     public void checkLogin(String keyword)

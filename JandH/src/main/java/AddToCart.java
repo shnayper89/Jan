@@ -15,7 +15,8 @@ public class AddToCart {
     public AddToCart(WebDriver driver) {this.driver = driver;}
 
     @Before
-    public void before() {
+    public void before() throws InterruptedException {
+        Thread.sleep(2000);
         driver.findElement(By.cssSelector(".logo")).click();
     }
     @Test

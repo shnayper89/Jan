@@ -30,5 +30,5 @@ public class Checkout {
 
 
     }
-     public void placeYourOrder() { driver.findElements(By.cssSelector(".btn.review.orange.place_order")).get(0).click();}
+
 }

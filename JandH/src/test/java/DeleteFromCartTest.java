@@ -3,17 +3,16 @@ import org.junit.Test;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
- * Created by spirit on 8/1/16.
+ * Created by spirit on 8/4/16.
  */
-public class JandH {
+public class DeleteFromCartTest {
     FirefoxDriver driver = new FirefoxDriver();
     Autorization autorization = new Autorization(driver);
     AddToCart addToCart = new AddToCart(driver);
     CheckReelSpool checkReelSpool = new CheckReelSpool(driver);
-    DeleteFromCart deleteFromeCart = new DeleteFromCart(driver);
+    DeleteFromCart deleteFromCart = new DeleteFromCart(driver);
     Checkout checkout = new Checkout(driver);
     PaymentMethod paymentmethod = new PaymentMethod(driver);
-    Check_OrderIsPlaced check_OrderIsPlaced = new Check_OrderIsPlaced(driver);
 
     @Before
 
@@ -33,29 +32,21 @@ public class JandH {
         autorization.clickOnYourAccount();
 
         autorization.checkLogin("Your Account");
+        deleteFromCart.before();
+        for (int i = 0; i < 100; i++) {
 
-        for (int i = 0; i < 1; i++) {
-            addToCart.before();
-            addToCart.choseItem();
-            checkReelSpool.checkReelSpool();
+            deleteFromCart.deleteFromCart();
+            Thread.sleep(2000);
         }
 
-        addToCart.after();
 
-        checkout.proceedToCheckout(".btn", "Proceed to Checkout");
 
-        paymentmethod.clickOnChangePaymentMethod();
-        paymentmethod.selectionPaymentMethod_CreditCard();
-        paymentmethod.clickOnPlaceYourOrder();
-
-        check_OrderIsPlaced.check_OrderIsPlaced();
-
-}
+    }
 
 
 }
-    //@After
+//@After
 
-    //public void close() {driver.close();}
+//public void close() {driver.close();}
 
 

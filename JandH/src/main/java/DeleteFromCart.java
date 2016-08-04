@@ -10,7 +10,7 @@ public class DeleteFromCart {
     private final WebDriver driver;
     public DeleteFromCart(WebDriver driver) {this.driver = driver;}
     @Before
-    public void before() {driver.get("http://jandh3-test.php-cd.attractgroup.com/cart");}
+    public void before() {driver.findElement(By.cssSelector(".elem_nav.cart")).click();}
     @Test
     public void deleteFromCart() throws InterruptedException {
 
@@ -24,9 +24,5 @@ public class DeleteFromCart {
 
 /*
 
-        for (int i = 0; i < 100; i++) {
-            deleteFromeCurt.before();
-            deleteFromeCurt.deleteFromCart();
-        }
 
  */
