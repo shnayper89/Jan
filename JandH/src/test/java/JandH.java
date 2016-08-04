@@ -34,7 +34,7 @@ public class JandH {
 
         autorization.checkLogin("Your Account");
 
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 4; i++) {
             addToCart.before();
             addToCart.choseItem();
             checkReelSpool.checkReelSpool();
